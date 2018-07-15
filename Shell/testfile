@@ -1,0 +1,27 @@
+
+
+*******This file was created with the "touch 'filename'" command.*******
+
+
+Fork:
+
+When you come to metaphorical "fork in the road" you generally have two options to take, and your decision effects your future. Computer programs reach this fork in the road when they hit the fork() system call.
+
+At this point, the operating system will create a new process that is exactly the same as the parent process. This means all the state that was talked about previously is copied, including open files, register state and all memory allocations, which includes the program code.
+
+The return value from the system call is the only way the process can determine if it was the existing process or a new one. The return value to the parent process will be the Process ID (PID) of the child, whilst the child will get a return value of 0.
+
+At this point, we say the process has forked and we have the parent-child relationship as described above.
+
+
+
+Execv:
+
+Like all of the exec functions, execv replaces the calling process image with a new process image. This has the effect of running a new progam with the process ID of the calling process. Note that a new process is not started; the new process image simply overlays the original process image. The execv function is most commonly used to overlay a process image that has been created by a call to the fork function.
+file
+is the filename of the file that contains the executable image of the new process.
+argv
+is a pointer to an array of pointers to null-terminated character strings. A NULL pointer is used to mark the end of the array. Each character string pointed to by the array is used to pass an argument to the new process image. The first argument, argv[0], is required and must contain the name of the executable file for the new process image.
+RETURN VALUE
+
+A successful call to execv does not have a return value because the new process image overlays the calling process image. However, a -1 is returned if the call to execv is unsuccessful.

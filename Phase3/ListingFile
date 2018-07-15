@@ -1,0 +1,53 @@
+                SUM		START	8000
+Cannot access memory at that address.
+
+008000  04A785  FIRST	LDX		ZERO		INITIALIZE REGISTERS
+
+008003  00A785  		LDA		ZERO
+
+008006  188000  LOOP	ADD		TABLE,X		ADD THE ELEMENTS
+
+008009  2C0000  		TIX		COUNT		ARE WE DONE?
+
+00800C  F68006  LOOP	JT		LOOP		IF NOT, LOOP
+Duplicated label.
+Invalid instruction.
+Undefined symbol in operand.
+Unrecognized operation code.
+
+00800C  0CA789  		STA		TOTAL		STORE THE TOTAL
+
+00800F  4C0000  		RSUB				AND RETURN
+
+008012          8TABLE	RESW	2000		FOR THE ARRAY
+Illegal label.
+
+009782          COUN.T	RESW				NUMBER OF ELEMENTS
+Illegal label.
+Illegal or missing operand on data storage directive.
+
+009782  180000  		ADD		Count-X
+Invalid form of operand on instruction(mnemonics).
+Undefined symbol in operand.
+
+009785  F41  INPUT   BYTE    X'F41'		CODE FOR INPUT DEVICE
+No even number of digits on operand.
+
+009785          BUFFER  RESB    4096		4096-BYTE BUFFER AREA
+
+00A785  454F46  EOF     BYTE    S'EOF'
+Illegal type on operand for BYTE directive.
+
+00A785  000000  ZERO	WORD	A			CONSTANT
+Illegal or missing operand on data storage directive.
+
+00A788  G5  OUTPUT  BYTE   	X'G5'		CODE FOR OUTPUT DEVICE
+No hexadecimal value for BYTE directive on operand type X.
+
+00A789          TOTAL	RESW	1			PLACE FOR TOTAL
+
+00A78C          		END
+Missing operand on END directive.
+Program too long.
+Undefined symbol in operand.
+

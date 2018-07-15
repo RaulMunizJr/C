@@ -1,0 +1,27 @@
+Errors Assembler.
+
+Error	Meaning
+10  Missing Start directive.
+11	Illegal or missing operand on Start directive.
+12	Cannot access memory at that address.
+13	Duplicated label.
+14	More than 500 labels.
+15	Illegal type on operand for BYTE directive.
+16	No even number of digits on operand.
+17	Invalid operand on BYTE directive.
+18	Exceed maxlengthof Char bytes.
+19	Exceed maxlengthof Hex bytes.
+20	Illegal or missing operand on instruction(mnemonics).
+21	No hexadecimal address of operand on instruction(mnemonics).
+22	Invalid form of operand on instruction(mnemonics).
+23	Missing operand on END directive.
+24	Illegal operand on END directive.
+25	Program too long.
+26	Invalid instruction.
+27	Illegal label.
+28	Illegal or missing operand on data storage directive.
+29	No hexadecimal value for BYTE directive on operand type X.
+30 	Duplicate or misplaced START statement.
+31  Missing or misplaced operand in BYTE statement.
+32  Undefined symbol in operand.
+33	Unrecognized operation code.
